@@ -1,0 +1,31 @@
+digraph cfg {
+  n1 [shape=doubleoctagon, label="Return: x"];
+  n2 [shape=box, label="Var: x"];
+  n4 [shape=ellipse, label="__vlab_restrict"];
+  n5 [shape=box, label="Lit: /.+/"];
+  n6 [shape=box, label="Var: x"];
+  n8 [shape=ellipse, label="preg_replace"];
+  n9 [shape=box, label="Lit: /</"];
+  n10 [shape=box, label="Lit: "];
+  n11 [shape=box, label="Var: x"];
+  n13 [shape=ellipse, label="__vlab_restrict"];
+  n14 [shape=box, label="Lit: /^.{0,4}$/"];
+  n15 [shape=box, label="Var: x"];
+  n17 [shape=house, label="Input: x"];
+  n18 [shape=box, label="Lit: false"];
+  n19 [shape=box, label="Lit: false"];
+  n4 -> n5;
+  n4 -> n6;
+  n4 -> n19;
+  n8 -> n9;
+  n8 -> n10;
+  n8 -> n11;
+  n13 -> n14;
+  n13 -> n15;
+  n13 -> n18;
+  n15 -> n17;
+  n11 -> n13;
+  n6 -> n8;
+  n2 -> n4;
+  n1 -> n2;
+}
